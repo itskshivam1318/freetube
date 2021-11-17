@@ -48,7 +48,10 @@ flex:1;
 `
 
 const ThumbImage = styled.div`
-width:18em;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
 `
 export default function Home({ data }) {
   console.log(data)
@@ -78,8 +81,8 @@ export default function Home({ data }) {
                         width="320px"
                         // height={medium.height} 
                         src={medium.url} />
+                      <h3 style={{ paddingLeft: "5px" }}>{title}</h3>
                     </ThumbImage>
-                    <h3>{title}</h3>
                   </a>
                 </VideoItem>
               )
